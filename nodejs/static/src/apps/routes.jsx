@@ -1,5 +1,6 @@
 import Kanban from './kanban'
 import Dynamic from './chart'
+import Kanbans from './kanbans'
 import React from 'react'
 
 const routes = [
@@ -10,7 +11,7 @@ const routes = [
     },
     {
         path: "/management",
-        sidebar: () => <div>Management!</div>
+        sidebar: Kanbans
     },
     {
         path: "/chart",

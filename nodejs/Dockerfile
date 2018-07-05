@@ -1,6 +1,6 @@
 # 指定我们的基础镜像是node，版本是v8.0.0 ====node:8.0.0
-# Create app directory
-FROM hub.c.163.com/nce2/nodejs:0.12.2
+# Create app directory =====hub.c.163.com/nce2/nodejs:0.12.2
+FROM node:8.0.0
 # 指定制作我们的镜像的联系人信息（镜像创建者）
 # MAINTAINER JASON
 

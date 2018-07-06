@@ -65,5 +65,9 @@ func main() {
 		}
 
 	})
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+		fmt.Fprintf(w, "helloworld")
+
+	})
 	http.ListenAndServe(":9000", nil)
 }

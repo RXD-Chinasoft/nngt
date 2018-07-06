@@ -55,4 +55,4 @@
 
   ##dockerfile--golang
    ####go get github.com/lib/pq 检验db
-   
+   ####sudo docker run -d -p 9000:9000 nngt9000

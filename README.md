@@ -35,6 +35,8 @@
   ##nodejs提供web，go提供api service；所以，分别做nodejs集群和go集群，ngix做代理
   ##nodejs集群需要大于2台的服务器，这里采用docker分别部署nodejs （port）见docker
   ##go集群需要大于2台的服务器，这里采用docker分别部署go （port）见docker
+  ##install sudo apt-get install nginx;ps aux|grep nginx查看 Nginx 进程是否已经启动
+  ##本项目是在nginx.conf中配置；sudo service nginx reload
 
 #Docker
   ##win7、win8 等需要利用 docker toolbox 来安装，国内可以使用阿里云的镜像来下载，下载地址：http://mirrors.aliyun.com/docker-toolbox/windows/docker-toolbox/

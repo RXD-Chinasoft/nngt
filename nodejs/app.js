@@ -24,6 +24,6 @@ app.use(views(path.join(__dirname, './views'), {
 
 // 初始化路由中间件
 app.use(routers.routes()).use(routers.allowedMethods())
-app.listen(8800, () => {
-    console.log('[demo] static-use-middleware is starting at port 8800')
+app.listen(8801, () => {
+    console.log('[demo] static-use-middleware is starting at port 8801')
 })

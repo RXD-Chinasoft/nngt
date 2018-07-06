@@ -11,8 +11,7 @@
     "dev_static": "webpack --watch --config ./static/build/webpack.dev.config.js",
     "start_static": "webpack --config ./static/build/webpack.prod.config.js",
     "start_server": "node ./app.js",
-    "start_dev": "npm run start_static & npm run start_server",
-    "start": "npm run start_server"
+    "start": "npm run start_static & npm run start_server"
   },
   "author": "jason",
   "license": "ISC",

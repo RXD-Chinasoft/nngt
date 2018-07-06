@@ -48,4 +48,11 @@
    ####docker hub push；1.docker login，Username: XXX，Password: XXX。Login Succeeded；2.docker tag <name:tag> <namespace>/<name:tag>上传之前必须给镜像打上tag，namespace可以指定为你的dockerid。docker tag deploy:1.0 lzqs/deploy:1.0；3.docker push <namespace>/<name:tag>将镜像上传至docker的公共仓库。docker push lzqs/deploy:1.0；4.上传成功后，docker logout 退出，登录 https://hub.docker.com/ 查看上传的镜像。
    
    ####docker hub pull；通过docker pull <namespace>/<name:tag>下载我们的镜像。docker pull lzqs/deploy:1.0
+
+  ##dockerfile--postgres
+   ####docker pull postgres
+   ####docker run --name pq -e POSTGRES_PASSWORD=password -p 54321:5432 -d postgres 启动pq，默认数据库是postgres，-d postgres是用postgres作为启动镜像在后台运行;-e POSTGRES_PASSWORD=password，设置环境变量，指定数据库的登录口令为password；-p 54321:5432，端口映射将容器的5432端口映射到外部机器的54321端口； --name，指定创建的容器的名字； 
+
+  ##dockerfile--golang
+   ####go get github.com/lib/pq 检验db
    

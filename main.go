@@ -6,11 +6,39 @@ import (
 	"log"
 	"io/ioutil"
 	"encoding/json"
+	"database/sql"
+	_ "github.com/lib/pq"
 )
 
 type Result struct {
 	Success bool `json:"success"`
 	Reseason string `json:"reseason"`
+}
+
+const (
+	host = "localhost"
+	port = 54321
+	user = "postgres"
+	password = "password"
+	dbname = "postgres"
+)
+var db *sql.DB
+var psqlInfo string
+
+func init() {
+	psqlInfo = fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", host, port, user, password, dbname)
+	var err error
+	db, err = sql.Open("postgres", psqlInfo)
+	if err != nil {
+		log.Printf("open db err %s", err)
+	}
+	err = db.Ping()
+	if err != nil {
+		log.Printf("ping db err %s", err)
+	} else {
+		log.Println("ping db successfully!")
+	}
+
 }
 
 func main() {
@@ -35,6 +63,7 @@ func main() {
 				}
 			}
 		}
+
 	})
-	http.ListenAndServe(":8000", nil)
+	http.ListenAndServe(":9000", nil)
 }

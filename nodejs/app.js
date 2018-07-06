@@ -8,6 +8,7 @@ const bodyParser = require('koa-bodyparser')
 const views = require('koa-views')
 const path = require('path')
 const koaStatic = require('koa-static')
+const PORT = 8800
 
 // 配置ctx.body解析中间件
 app.use(bodyParser())
@@ -24,6 +25,6 @@ app.use(views(path.join(__dirname, './views'), {
 
 // 初始化路由中间件
 app.use(routers.routes()).use(routers.allowedMethods())
-app.listen(8801, () => {
-    console.log('[demo] static-use-middleware is starting at port 8801')
+app.listen(PORT, () => {
+    console.log('[demo] static-use-middleware is starting at port ' + PORT)
 })
